@@ -1,0 +1,17 @@
+{
+    "database" : {
+        "databaseName": "DiscoverVietnam",
+        "username": "ducminh",
+        "password": "VKhEXIfIfS3qGgWe"
+    },
+    "facebookAuth": {
+        "clientID": "387757941808769",
+        "clientSecret": "5e90668485dc42c1be1bf2d8e1a1bab6",
+        "callbackURL": "/auth/facebook/callback"
+    },
+    "googleAuth": {
+        "clientID": "491619876217-4ru75fs8m5vir6fa5kerd18n0k4d8jba.apps.googleusercontent.com",
+        "clientSecret": "45PE_fv0Il5Xm0RdUqG3anoj",
+        "callbackURL": "/auth/google/callback"
+    }
+}
