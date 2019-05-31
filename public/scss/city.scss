@@ -1,0 +1,24 @@
+.container{
+    &__content{
+        &__header{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10em;
+            h1{
+                font-size: 6em;
+                color: #fff;
+            }
+            p{
+                font-size: 2.5em;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+}
