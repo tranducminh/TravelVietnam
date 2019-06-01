@@ -8,12 +8,9 @@ html, body{
     box-sizing: border-box;
 }
 a {
-    display: inline-block;
+    display: block;
     text-decoration: none;
     color: #000000;
-    &:hover{
-        color: #39d1e6;
-    }
 }
 
 .header{
@@ -203,14 +200,8 @@ a {
 .font--white{
     color: #fff;
 }
-.font--gray{
-    color: gray;
-}
 .font--small{
     font-size: 0.9em;
-}
-.font--normal{
-    font-size: 1.4em;
 }
 .font--big{
     font-size: 2em;

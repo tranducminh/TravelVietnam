@@ -24,6 +24,12 @@ app.get("/cities", (req, res) => {
 app.get("/city", (req, res) => {
     res.render('city.ejs')
 })
+app.get("/post", (req, res) => {
+    res.render('post.ejs')
+})
+app.get("/profile", (req, res) => {
+    res.render('profile.ejs')
+})
 
 app.get("/", (req, res) => {
     res.render('home.ejs')

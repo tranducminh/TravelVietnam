@@ -7,11 +7,6 @@ html, body{
     margin: 0;
     box-sizing: border-box;
 }
-a {
-    display: block;
-    text-decoration: none;
-    
-}
 
 .container{
     width: 100%;
@@ -20,7 +15,7 @@ a {
     &__header{
         position: relative;
         height: 50em;
-        background-image: url('/assets/images/1.jpg');
+        background-image: url('/assets/images/me/1.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -39,7 +34,23 @@ a {
     }
     &__content{
         padding: 0 1em;
-        
+        &__toprated{
+            &__post{
+                .fa-map-marker-alt{
+                    margin: 0 0.5em;
+                }
+                &__place{
+                    &:hover{
+                        color: #39d1e6;
+                    }
+                }
+            }
+        }
+    }
+    .chosen{
+        &:hover{
+            color: #39d1e6;
+        }
     }
 }
 @media (min-width: 930px){
