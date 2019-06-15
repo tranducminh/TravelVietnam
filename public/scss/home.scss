@@ -14,12 +14,11 @@ html, body{
     position: relative;
     &__header{
         position: relative;
-        height: 50em;
-        background-image: url('/assets/images/me/1.jpg');
+        //height: 50em;
+        background-image: url('/assets/images/me/advertising1481688720.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        // background: url('/assets/images/1.jpg') no-repeat top center;
         margin-bottom: 1em;
         &__content{
             position: relative;
@@ -29,11 +28,30 @@ html, body{
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 10em;
+            padding: 2em 0;
+            &__search{
+                width: 80%;
+                height: 80%;
+                background: rgba(0, 174, 239, 0.7);
+                border-radius: 0.5em;
+                padding: 1em 0;
+                input{
+                    padding: 0.5em 1em;
+                    margin: 1em 0 1em 0;
+                    font-size: 1.1em;
+                    border-radius: 9999em;
+                    border: solid 2px #39d1e6;
+                    width: 80%;
+                    outline: none;
+                    &:focus{
+                        box-shadow: 0.2em 0.3em 0.5em #39d1e6;
+                    }
+                }
+            }
         }
     }
     &__content{
-        padding: 0 1em;
+        padding: 0 2em;
         &__toprated{
             &__post{
                 .fa-map-marker-alt{
@@ -55,13 +73,26 @@ html, body{
 }
 @media (min-width: 930px){
     .container{
+        &__header{
+            &__content{
+                &__search{
+                    width: 50%;
+                }
+            }
+        }
         &__content{
+            padding: 0 6em;
             &__cities{
                 padding: 1em 0;
+                margin: 0 auto;
+                width: 90%;
             }
             &__toprated{
                 padding: 1em 0;
             }
         }
+    }
+    .block{
+        width: 25%;
     }
 }
