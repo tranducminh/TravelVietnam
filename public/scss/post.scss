@@ -17,130 +17,85 @@
                 
             }
         }
-        &__content{
-            padding: 2em;
-            &__title{
-                text-align: center;
-            }
-            &__descript{
-                font-size: 1.3em;
-                text-align: center;
-                padding: 1em 0;
-                line-height: 1.5em;
-            }
-            &__host{
-                text-align: center;
-                img{
-                    border-radius: 50%;
-                    width: 5em;
-                    height: 5em;
-                }
-                &__info{
-                    text-align: center;
-                    font-size: 1.2em;
-                    padding: 1em 0;
-                    font-weight: 500;
-                    color: gray;
-                }
-                
-            }
 
-            &__left{
-                &__part{
-                    padding: 1em 0;
-                    border-bottom: solid 1px gray;
-                    &__title{
-                        margin-bottom: 1em;
-                        font-size: 1.5em;
-                    }
-                    &__detail{
-                        font-size: 1.2em;
-                        line-height: 1.5em;
-                    }
+        &__center{
+            width: 100%;
+            margin: 0 auto;
+            padding: 1em;
+            // background-color: aqua;
+            &__part{
+                border-radius: 1em;
+                border: solid 1px gray;
+                margin: 1em;
+                &__title{
+                    border-top-left-radius: 1em;
+                    border-top-right-radius: 1em;
+                    background-color: #72cef3;
+                    padding: 0.6em;
                 }
-            }
+                &__content{
+                    table{
 
-            &__right{
-                padding: 2em 0em;
-                &__booking{
-                    border-left: solid 3px #39d1e6;
-                    padding: 1em;
-                    box-shadow: 0 0 1em darkgray;
-                    width: 90%;
-                    &__order{
-                        margin: 1em 0;
-                        button{
-                            border-radius: 9999em;
-                            background-color: #39d1e6;
-                            padding: 0.5em 1em;
-                            outline: none;
-                            
-                        }
-                    }
-                }
-                &__review{
-                    padding: 2em 0;
-                    &__detail{
-                        padding: 1em 0;
-                        border-bottom: solid 1px gray;
-                        &__user{
-                            img{
-                                width: 2em;
-                                height: 2em;
-                                border-radius: 50%;
-                                margin-right: 0.5em;
+                        tr{
+                            display: block;
+                            margin: 1em 0;
+                            td{
+                                border-left: solid 1px gray;
+                                padding: 0 1em;
+                                line-height: 1.8em;
+                                &.first{
+                                    border: none;
+                                    width: 10em;
+                                    &.time{
+                                        width: 3em;
+                                    }
+                                    
+                                }
                             }
-                            display: flex;
-                            align-items: center;
-                            font-size: 1.1em;
-                        }
-                        &__detail{
-                            padding: 0 1em;
-                            line-height: 1.5em;
                         }
                     }
-                    &__comment{
-                        width: 100%;
-                        padding: 1em 0;
+                    &__order{
                         display: flex;
+                        justify-content: space-around;
                         align-items: center;
-                        img{
-                            width: 2em;
-                            height: 2em;
-                            border-radius: 50%;
-                            margin-right: 0.5em;
-                        }
-                        input{
-                            border-radius: 9999px;
-                            padding: 0.5em 1em;
-                            outline: none;
-                            font-size: 1.1em;
-                            width: 70%;
-                        }
+                        margin: 1em 0;
                     }
                 }
             }
         }
+        
     }
 }
 
 @media (min-width: 930px){
     .container{
         &__content{
-            &__content{
-                padding: 5em 10em;
-                &__left{
-                    width: 60%;
-                    float: left;
-                }
-                &__right{
-                    width: 40%;
-                    float: left;
-                    padding-left: 2em;
-                    &__booking{
-                        width: 70%;
+            &__center{
+                width: 60%;
+                &__part{
+                    &__content{
+                        padding: 1em 4em;
+                        display: flex;
+                        justify-content: space-between;
+                        &__order{
+                            flex-direction: column;
+                            justify-content: flex-end;
+                        }
+                        table{
+                            tr{
+                                td{
+                                    &.first{
+                                        width: 12em;
+                                        &.time{
+                                            width: 8em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
+
             }
         }
     }
