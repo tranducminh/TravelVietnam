@@ -16,11 +16,8 @@
             <%- include('header') -%>
         </div>
         <div class="container__content">
-            <!-- <div class="container__content__header" style="background-image: url('/assets/images/me/ho_guom.jpg')">
-                <h1>HO CHI MINH</h1>
-                <p>blab lab lalhakj shkj fhajshf jak aks gdkg ha jkhskjhkjah ah h k </p>
-            </div> -->
-            <div class="container__content__nav" style="display: none">
+            
+            <div class="container__content__nav">
                 <!-- Bộ lọc tìm kiếm -->
                 <div class="container__content__nav__part">
                     <div class="container__content__nav__part__title ">
@@ -95,28 +92,72 @@
 
             <!-- Các tour du lịch -->
             <div class="container__content__post">
-                <div class="container__content__post__title">
-                    <div class="font font--bold font--normal">Tour đi Đà Lạt</div>
+                <div class="container__content__post__place">
+                    <div class="font font--bold font--big">Tour đi Đà Lạt</div>
                 </div>
+
+                <!-- tất cả các bài đăng về tour tại địa điểm -->
                 <div class="part">
-                    <a href="#" class="container__content__post__detail block">
-                        <div class="bg-img" style="background-image: url('/assets/images/me/ho_guom.jpg');">
 
+                    <!-- bài đăng của tour -->
+                    <div class="block">
+
+                        <div class="container__content__post__detail">
+                            <!-- tiêu đề tour du lịch -->
+                            <div class="container__content__post__detail__title">
+                                <div class="font font--normal font--bold font--space">Tour đi Đà Lạt Thác Voi - Làng
+                                    nghề
+                                </div>
+                            </div>
+                            <!-- end-tiêu đề tour du lịch -->
+
+                            <!-- chi tiết tour du lịch -->
+                            <div class="container__content__post__detail__content">
+                                <a href="#" class="bg-img"
+                                    style="background-image: url('/assets/images/me/ho_guom.jpg');">
+
+                                </a>
+                                <div class="container__content__post__detail__content__info">
+                                    <div class="font--space">
+                                        <span class="font font--bold">Ngày khởi hành: </span>
+                                        <span class="font font--blue">Hàng ngày</span>
+                                    </div>
+                                    <div class="font--space">
+                                        <span class="font font--bold">Địa điểm khởi hành: </span>
+                                        <span class="font font--blue">Đà Lạt</span>
+                                    </div>
+                                    <div class="font--space">
+                                        <span class="font font--bold">Thời gian: </span>
+                                        <span class="font font--blue">3 ngày 2 đêm</span>
+                                    </div>
+                                    <div class="font--space">
+                                        <span class="font font--bold">Phương tiện: </span>
+                                        <span class="font font--blue">Ô tô</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- end-chi tiết tour du lịch -->
                         </div>
-                        <div class="container__content__post__detail__info">
-                            <div class="font font--bold font--space">Ngày khời hành: </div>
-                            <div class="font font--bold font--space">Địa điểm khời hành: </div>
-                            <div class="font font--bold font--space">Thời gian: </div>
-                            <div class="font font--bold font--space">Phương tiện: </div>
+
+                        <!-- giá của tour -->
+                        <div class="container__content__post__price">
+                            <div class="font--normal font--bold font--green">10.000.000 VND</div>
+                            <div class="btn btn--blue font">Xem tour</div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- kết thúc bài đăng của tour -->
 
 
                 </div>
+
+
+
             </div>
-            <!-- END__POST -->
         </div>
-        <!-- END__CONTENT -->
+        <!-- END__POST -->
+    </div>
+    <!-- END__CONTENT -->
     </div>
 </body>
 

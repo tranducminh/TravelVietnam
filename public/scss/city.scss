@@ -25,8 +25,9 @@
             }
         }
         &__nav{
+            display: none;
             float: left;
-            width: 30%;
+            width: 25%;
             padding: 0 1em;
             &__part{
                 width: 100%;
@@ -79,11 +80,13 @@
         &__post{
             width: 100%;
             float: left;
-            &__title{
+            &__place{
                 color: #39d1e6;
+                border-bottom: solid 1px gray;
             }
             .block{
                 width: 100%;
+                border-bottom: solid 1px gray;
             }
             .bg-img{
                 width: 100%;
@@ -91,9 +94,19 @@
             &__detail{
                 width: 100%;
                 //display: flex;
-                &__info{
-                    padding: 1em;
+                &__content{
+                    &__info{
+                        padding: 1em;
+                    }
                 }
+                
+            }
+            &__price{
+                padding:0 0.5em 0.5em 0.5em;
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
         }
     }
@@ -106,6 +119,35 @@
             &__header{
                 padding: 10em;
             }
+            &__nav{
+                display: block;
+            }
+            &__post{
+                width: 70%;
+                .block{
+                    display: flex;
+                }
+                &__detail{
+                    width: 80%;
+                    &__content{
+                        display: flex;
+                        justify-content: flex-start;
+                        &__info{
+                            padding: 0 1em;
+                        }
+                    }
+                    
+                }
+                &__price{
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                .bg-img{
+                    width: 50%;
+                    min-width: 40%;
+                }
+            }
+            
         }
     }
     .block{
