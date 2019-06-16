@@ -47,7 +47,7 @@
   .container__content__center {
     width: 60%; }
     .container__content__center__part__content {
-      padding: 1em 4em;
+      padding: 1em 2em;
       display: flex;
       justify-content: space-between; }
       .container__content__center__part__content__order {

@@ -18,8 +18,8 @@ app.use(morgan('dev'));
 app.set('view engine', 'ejs');
 app.set('views', './app/views')
 
-app.get("/cities", (req, res) => {
-    res.render('cities.ejs')
+app.get("/signin", (req, res) => {
+    res.render('signin.ejs')
 })
 app.get("/city", (req, res) => {
     res.render('city.ejs')
