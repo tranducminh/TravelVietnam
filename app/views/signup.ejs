@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head') %>
+    <link rel="stylesheet" href="/assets/css/signup.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__header">
+            <%- include('header') %>
+        </div>
+        <div class="container__center">
+            <div class="container__center__content">
+                <div class="container__center__content__title">
+                    <div class="font font--bold font--big">Đăng ký</div>
+                </div>
+                <div class="container__center__content__detail">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="font font--bold">Họ tên</div>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Họ tên" title="Nhập họ tên">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font font--bold">Email</div>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Email" title="Nhập email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font font--bold">Tên đăng nhập</div>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Tên đăng nhập" title="Nhập tên đăng nhập">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font font--bold">Mật khẩu</div>
+                            </td>
+                            <td>
+                                <input type="password" placeholder="Mật khẩu" title="Nhập mật khẩu">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font font--bold">Xác nhận mật khẩu</div>
+                            </td>
+                            <td>
+                                <input type="password" placeholder="Xác nhận mật khẩu" title="Xác nhận mật khẩu">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font font--bold">Ảnh đại diện</div>
+                            </td>
+                            <td>
+                                <input type="file" placeholder="Xác nhận mật khẩu" title="Xác nhận mật khẩu">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <button class="btn btn--blue font flex">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

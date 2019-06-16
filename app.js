@@ -3,6 +3,8 @@ let bodyParser = require('body-parser')
 let cookieParser = require('cookie-parser')
 let morgan = require('morgan')
 let mongoose = require('mongoose')
+let passport = require('passport')
+let session = require('express-session');
 let dbConfig = require("./config/dbConnection.js");
 
 let app = express();
@@ -14,6 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cookieParser())
 app.use(morgan('dev'));
+app.use(passport.initialize()); //Khởi tạo passport-local
+app.use(passport.session());
 
 app.set('view engine', 'ejs');
 app.set('views', './app/views')
@@ -27,8 +31,8 @@ app.get("/city", (req, res) => {
 app.get("/post", (req, res) => {
     res.render('post.ejs')
 })
-app.get("/profile", (req, res) => {
-    res.render('profile.ejs')
+app.get("/signup", (req, res) => {
+    res.render('signup.ejs')
 })
 
 app.get("/", (req, res) => {
