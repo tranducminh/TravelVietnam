@@ -17,30 +17,36 @@
                 <div class="container__center__content__title">
                     <div class="font font--bold font--big">Đăng nhập</div>
                 </div>
-                <div class="container__center__content__detail">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="font font--bold">Tên đăng nhập</div>
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Tên đăng nhập" title="Nhập tên đăng nhập">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="font font--bold">Mật khẩu</div>
-                            </td>
-                            <td>
-                                <input type="password" placeholder="Mật khẩu" title="Nhập mật khẩu">
-                            </td>
-                        </tr>
-                    </table>
-                    <button class="btn btn--blue font flex">Đăng nhập</button>
-                </div>
+                <form action="/signin" id="formSignin" method="POST">
+                    <div class="container__center__content__detail">
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="font font--bold">Tên đăng nhập</div>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Tên đăng nhập" name="username" title="Nhập tên đăng nhập">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font font--bold">Mật khẩu</div>
+                                </td>
+                                <td>
+                                    <input type="password" placeholder="Mật khẩu" name="password" title="Nhập mật khẩu">
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="btnSignin" class="btn btn--blue font flex">Đăng nhập</div>
+
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
 </body>
+<script src="./assets/js/signin.js"></script>
 
 </html>
