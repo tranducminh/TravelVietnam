@@ -23,6 +23,9 @@
             margin: 0 auto;
             padding: 1em;
             // background-color: aqua;
+            &__title{
+                
+            }
             &__part{
                 border-radius: 1em;
                 border: solid 1px gray;
@@ -40,6 +43,7 @@
                             display: block;
                             margin: 1em 0;
                             td{
+                    
                                 border-left: solid 1px gray;
                                 padding: 0 1em;
                                 line-height: 1.8em;
@@ -65,7 +69,13 @@
         }
         
     }
-    
+    textarea, input{
+        padding: 0.4em;
+        width: 100%;
+        outline: none;
+        resize: none;
+        margin: 0.5em 0;
+    }
 }
 
 @media (min-width: 930px){

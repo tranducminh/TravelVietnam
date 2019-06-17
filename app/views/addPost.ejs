@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head') %> 
+    <link rel="stylesheet" href="/assets/css/addPost.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__header">
+            <%- include('header') -%>
+        </div>
+        <div class="container__content">
+
+            <!-- content__header -->
+            <div class="container__content__header">
+                <div class="container__content__header__image" style="background-image: url('/assets/images/me/MINH.jpg')">
+                </div>
+                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
+
+                </div>
+                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
+
+                </div>
+                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
+
+                </div>
+                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
+
+                </div>
+                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
+
+                </div>
+
+
+            </div>
+            <!-- END_CONTENT_HEADER -->
+
+            <!-- Content_center -->
+            <div class="container__content__center">
+                <!-- Tên tour -->
+                <div class="container__content__center__title">
+                    <textarea type="text" class="font font--big font--bold font--blue" placeholder="Nhập tên tour ..." rows="3"></textarea>
+                </div>
+
+                <!-- Chi tiết tour -->
+                <div class="container__content__center__part">
+
+                    <div class="container__content__center__part__content">
+                        <table>
+                            <tr>
+                                <td class="first font font--bold">Ngày khởi hành </td>
+                                <td class="second font">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td class="first font font--bold">Địa điểm khởi hành </td>
+                                <td class="second">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first font font--bold">Thời gian </td>
+                                <td class="second">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first font font--bold">Phương tiện </td>
+                                <td class="second">
+                                    <textarea class="font" name="" id="" rows="1"></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <div class="container__content__center__part__content__order">
+                            
+                            <textarea name="" id="" rows="1" class="font font--normal font--green font--bold" placeholder="Chi phí"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- hết chi tiết tour -->
+
+                <!-- Thông tin nhà cung cấp -->
+                <div class="container__content__center__part">
+
+                    <div class="container__content__center__part__content">
+                        <table>
+                            <tr>
+                                <td class="first font font--bold">Tên nhà cung cấp </td>
+                                <td class="second font"></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td class="first font font--bold">Địa chỉ</td>
+                                <td class="second">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first font font--bold">SĐT liên hệ </td>
+                                <td class="second">
+                                    
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+                <!-- Hết thông tin nhà cung cấp -->
+
+                <!-- Lịch trình -->
+                <div class="container__content__center__part">
+                    <div class="container__content__center__part__title">
+                        <div class="font font--normal font--bold">Lịch trình</div>
+                    </div>
+                    <div class="container__content__center__part__content">
+                        <table>
+                            <tr>
+                                <td class="first time font font--bold">8:30 - 9:30</td>
+                                <td class="second font">Đón khách tại Khách sạn Tham quan: Vườn Hoa và Vườn Rau Vạn
+                                    Thành</td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td class="first time font font--bold">8:30 - 9:30</td>
+                                <td class="second">
+                                    <div class="font font--bold font--space">Cơ sở sản xuất tơ tằm</div>
+                                    <div class="font">Sau khi các bạn tham quan cách nuôi tằm lấy tơ – tại đây quý khách
+                                        sẽ học được cách
+                                        lấy tơ từ kén tằm và quấn dệt thành lụa . Đồng thời quý khách có thể mua các sản
+                                        phẩm từ tơ tằm tại đây.</div>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!-- Hết lịch trình -->
+                <button class="btn btn--green font">Đăng bài</button>
+
+            </div>
+            <!-- end_content_center -->
+
+        </div>
+        <!-- END_CONTENT -->
+
+</body>
+
+<script src="/assets/js/post.js"></script>
+
+</html>

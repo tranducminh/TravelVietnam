@@ -3,7 +3,7 @@ var LocalStrategy = require('passport-local').Strategy;
 // var FacebookStrategy = require('passport-facebook').Strategy;
 // var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-var User = require('../app/models').User.users;
+var User = require('../app/models').User;
 var configAuth = require('./config.json');
 
 

@@ -6,7 +6,12 @@ let configPassport = require('../../config/passport.js');
 configPassport(passport)
 router.use(passport.initialize()); //Khởi tạo passport-local
 router.use(passport.session());
-router.use(session({ secret: '1234567890' }));
+router.use(session({
+    secret: '1234567890',
+    cookie: {
+        expires: 365 * 24 * 60 * 60 * 1000 //thời gian cookie còn hiệu lực mili giây
+    }
+}));
 router.use(flash());
 
 /**

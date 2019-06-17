@@ -14,12 +14,21 @@ function renderSignupPage(req, res) {
 }
 
 function logout(req, res) {
-    req.logout();
+    // req.session.passport.user = null;
+    req.session.destroy(err => {
+
+    });
     res.redirect('/signin');
+  
 }
 
 function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated())
+    if (req.session.passport){
+        console.log("blabla")
+        console.log(req.user)
         return next();
-    res.redirect('/signin'); // nếu chưa đăng nhâp điều hướng quay lại trang chủ
+    }
+    console.log(req.session)
+    return res.status(403).redirect('/signin');
+    // res.redirect('/signin'); // nếu chưa đăng nhâp điều hướng quay lại trang chủ
 }

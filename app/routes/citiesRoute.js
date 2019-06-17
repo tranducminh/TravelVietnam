@@ -1,7 +1,7 @@
 let router = require('express').Router();
 let citiesCtrl = require('../controllers').Cities;
+let userCtrl = require('../controllers').User;
 
-router.route('/cities')
-    .get(citiesCtrl.renderCitiesPage)
+router.get('/cities', citiesCtrl.renderCitiesPage)
 
 module.exports = router;

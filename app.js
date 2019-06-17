@@ -28,8 +28,8 @@ app.get("/post", (req, res) => {
     res.render('post.ejs')
 })
 
-app.get("/", (req, res) => {
-    res.render('home.ejs')
+app.get("/addPost", (req, res) => {
+    res.render('addPost.ejs')
 })
 
 app.use(require('./app/routes'));
