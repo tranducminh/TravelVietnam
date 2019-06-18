@@ -41,138 +41,141 @@
 
             <!-- Content_center -->
             <div class="container__content__center">
-                <!-- Tên tour -->
-                <div class="container__content__center__title">
-                    <textarea type="text" class="font font--big font--bold font--blue" placeholder="Nhập tên tour ..."
-                        rows="3"></textarea>
-                </div>
 
-                <!-- Chi tiết tour -->
-                <div class="container__content__center__part">
+                <form action="/add-post" method="POST">
+                    <!-- Tên tour -->
+                    <div class="container__content__center__title">
+                        <textarea name = "name" type="text" class="font font--big font--bold font--blue"
+                            placeholder="Nhập tên tour ..." rows="3"></textarea>
+                    </div>
 
-                    <div class="container__content__center__part__content">
-                        <table>
-                            <tr>
-                                <td class="first font font--bold">Ngày khởi hành </td>
-                                <td class="second">
-                                    <textarea class="font" name="" id="" rows="1"
-                                        placeholder="Hàng ngày, 1/1/2019, ..."></textarea>
-                                </td>
-                            </tr>
-                            <tr></tr>
-                            <tr>
-                                <td class="first font font--bold">Địa điểm khởi hành </td>
-                                <td class="second">
-                                    <textarea class="font" name="" id="" rows="1"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="first font font--bold">Thời gian </td>
-                                <td class="second">
-                                    <textarea class="font" name="" id="" rows="1"
-                                        placeholder="3 ngày 2 đêm ..."></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="first font font--bold">Phương tiện </td>
-                                <td class="second">
-                                    <textarea class="font" name="" id="" rows="1"></textarea>
-                                </td>
-                            </tr>
+                    <!-- Chi tiết tour -->
+                    <div class="container__content__center__part">
 
-                        </table>
-                        <div class="container__content__center__part__content__order">
+                        <div class="container__content__center__part__content">
+                            <table>
+                                <tr>
+                                    <td class="first font font--bold">Ngày khởi hành </td>
+                                    <td class="second">
+                                        <textarea name = "departureDate" class="font" name="" id="" rows="1"
+                                            placeholder="Hàng ngày, 1/1/2019, ..."></textarea>
+                                    </td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="first font font--bold">Địa điểm khởi hành </td>
+                                    <td class="second">
+                                        <textarea name = "departurePlace" class="font" name="" id="" rows="1"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first font font--bold">Thời gian </td>
+                                    <td class="second">
+                                        <textarea name = "time" class="font" name="" id="" rows="1"
+                                            placeholder="3 ngày 2 đêm ..."></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first font font--bold">Phương tiện </td>
+                                    <td class="second">
+                                        <textarea name = "vehicle" class="font" name="" id="" rows="1"></textarea>
+                                    </td>
+                                </tr>
 
-                            <textarea name="" id="" rows="1" class="font font--normal font--green font--bold"
-                                placeholder="Chi phí"></textarea>
+                            </table>
+                            <div class="container__content__center__part__content__order">
+
+                                <textarea name = "cost" name="" id="" rows="1" class="font font--normal font--green font--bold"
+                                    placeholder="Chi phí"></textarea>
+                            </div>
+
                         </div>
-
                     </div>
-                </div>
-                <!-- hết chi tiết tour -->
+                    <!-- hết chi tiết tour -->
 
-                <!-- Thông tin nhà cung cấp -->
-                <div class="container__content__center__part">
+                    <!-- Thông tin nhà cung cấp -->
+                    <div class="container__content__center__part">
 
-                    <div class="container__content__center__part__content">
-                        <table>
-                            <tr>
-                                <td class="first font font--bold">Tên nhà cung cấp </td>
-                                <td class="second font"></td>
-                            </tr>
-                            <tr></tr>
-                            <tr>
-                                <td class="first font font--bold">Địa chỉ</td>
-                                <td class="second">
+                        <div class="container__content__center__part__content">
+                            <table>
+                                <tr>
+                                    <td class="first font font--bold">Tên nhà cung cấp </td>
+                                    <td class="second font"></td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="first font font--bold">Địa chỉ</td>
+                                    <td class="second">
 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="first font font--bold">SĐT liên hệ </td>
-                                <td class="second">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first font font--bold">SĐT liên hệ </td>
+                                    <td class="second">
 
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
 
-                        </table>
+                            </table>
 
+                        </div>
                     </div>
-                </div>
-                <!-- Hết thông tin nhà cung cấp -->
+                    <!-- Hết thông tin nhà cung cấp -->
 
-                <!-- Lịch trình -->
-                <div class="container__content__center__part">
-                    <div class="container__content__center__part__title">
-                        <div class="font font--normal font--bold">Lịch trình</div>
-                    </div>
-                    <div id="schedule" class="container__content__center__part__content">
-                        <table>
+                    <!-- Lịch trình -->
+                    <div class="container__content__center__part">
+                        <div class="container__content__center__part__title">
+                            <div class="font font--normal font--bold">Lịch trình</div>
+                        </div>
+                        <div id="schedule" class="container__content__center__part__content">
+                            <table>
 
-                            <tr>
-                                <td class="first">
-                                    <textarea name="" id="" rows="1" class="time font font--bold"
-                                        placeholder='Thời gian'></textarea>
-                                </td>
-                                <td class="second">
-                                    <textarea name="" id="" cols="30" rows="2" class="font font--bold font--space"
-                                        placeholder="Tiêu đề"></textarea>
-                                    <textarea name="" id="" cols="30" rows="5" class="font"
-                                        placeholder="Chi tiết hoạt động"></textarea>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td class="first">
+                                        <textarea name = "scheduleTime" name="" id="" rows="1" class="time font font--bold"
+                                            placeholder='Thời gian'></textarea>
+                                    </td>
+                                    <td class="second">
+                                        <textarea name = "scheduleTitle" id="" cols="30" rows="2" class="font font--bold font--space"
+                                            placeholder="Tiêu đề"></textarea>
+                                        <textarea name="scheduleDetail" id="" cols="30" rows="5" class="font"
+                                            placeholder="Chi tiết hoạt động"></textarea>
+                                    </td>
+                                </tr>
 
-                        </table>
+                            </table>
 
+                        </div>
+                        <div id="schedule_plus" class="container__content__center__part__option">
+                            <i class="fas fa-plus"></i>
+                        </div>
                     </div>
-                    <div id="schedule_plus" class="container__content__center__part__option">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <!-- Hết lịch trình -->
+                    <!-- Hết lịch trình -->
 
-                <!-- Cam kết -->
-                <div class="container__content__center__part">
-                    <div class="container__content__center__part__title">
-                        <div class="font font--normal font--bold">Cam kết</div>
-                    </div>
-                    <div id="policy" class="container__content__center__part__content">
-                        <table>
-                            <tr>
-                                <td style="border: none">
-                                    <textarea name="" id="" cols="100" rows="1" class="font"
-                                        placeholder='Đón khách đúng giờ ...'></textarea>
-                                </td>
-                            </tr>
-                            
+                    <!-- Cam kết -->
+                    <div class="container__content__center__part">
+                        <div class="container__content__center__part__title">
+                            <div class="font font--normal font--bold">Cam kết</div>
+                        </div>
+                        <div id="policy" class="container__content__center__part__content">
+                            <table>
+                                <tr>
+                                    <td style="border: none">
+                                        <textarea name="policy" id="" cols="100" rows="1" class="font"
+                                            placeholder='Đón khách đúng giờ ...'></textarea>
+                                    </td>
+                                </tr>
 
-                        </table>
+
+                            </table>
+                        </div>
+                        <div id="policy_plus" class="container__content__center__part__option">
+                            <i class="fas fa-plus"></i>
+                        </div>
                     </div>
-                    <div id="policy_plus" class="container__content__center__part__option">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <!-- Hết cam kết -->
-                <button class="btn btn--green font">Đăng bài</button>
+                    <!-- Hết cam kết -->
+                    <button type="submit" class="btn btn--green font">Đăng bài</button>
+                </form>
 
             </div>
             <!-- end_content_center -->

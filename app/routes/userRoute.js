@@ -3,14 +3,15 @@ let passport = require('passport');
 let session = require('express-session');
 let flash = require('connect-flash')
 let configPassport = require('../../config/passport.js');
-configPassport(passport)
+var User = require('../models').User.users;
+configPassport(User, passport)
 router.use(passport.initialize()); //Khởi tạo passport-local
 router.use(passport.session());
 router.use(session({
-    secret: '1234567890',
+    secret: 'khongnoi',
     cookie: {
         expires: 365 * 24 * 60 * 60 * 1000 //thời gian cookie còn hiệu lực mili giây
-    }
+    } 
 }));
 router.use(flash());
 
@@ -23,7 +24,7 @@ router.route('/signin')
     .get(userCtrl.renderLoginPage)
     .post(
         passport.authenticate('local-login', {
-            successRedirect: '/', // đăng ký thành công điều hướng tới trang hiển thị profile
+            successRedirect: '/addPost', // đăng ký thành công điều hướng tới trang hiển thị profile
             failureRedirect: '/signin', // đăng ký không thành công thì điều hướng quay lại trang signup
             failureFlash: true
         })

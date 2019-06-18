@@ -3,11 +3,11 @@ var LocalStrategy = require('passport-local').Strategy;
 // var FacebookStrategy = require('passport-facebook').Strategy;
 // var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-var User = require('../app/models').User;
+
 var configAuth = require('./config.json');
 
 
-module.exports = function (passport) {
+module.exports = function (User, passport) {
 
     passport.serializeUser(function (user, done) {
         done(null, user.id);
@@ -43,6 +43,7 @@ module.exports = function (passport) {
                     return done(null, false, req.flash('loginMessage', 'Password wrong'));
 
                 //successful
+                req.user = user;
                 return done(null, user);
             });
 

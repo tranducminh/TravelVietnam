@@ -1,4 +1,5 @@
 module.exports = {
     User: require('./userController'),
-    Cities: require('./citiesController')
+    Cities: require('./citiesController'),
+    Post: require('./postController')
 }

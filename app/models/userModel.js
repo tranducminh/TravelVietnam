@@ -56,4 +56,6 @@ userSchema.methods.validPassword = function (password) {
 
 let users = mongoose.model("user", userSchema);     //lưu schema vào database
 
-module.exports = users;
+module.exports = {
+    users: users
+};
