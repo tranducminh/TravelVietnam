@@ -23,10 +23,9 @@
             margin: 0 auto;
             padding: 1em;
             // background-color: aqua;
-            &__title{
-                
-            }
+            
             &__part{
+                position: relative;
                 border-radius: 1em;
                 border: solid 1px gray;
                 margin: 1em;
@@ -37,6 +36,7 @@
                     padding: 0.6em;
                 }
                 &__content{
+                    
                     table{
 
                         tr{
@@ -45,16 +45,20 @@
                             td{
                     
                                 border-left: solid 1px gray;
-                                padding: 0 1em;
+                                padding: 0 0.5em;
                                 line-height: 1.8em;
                                 &.first{
                                     border: none;
-                                    width: 10em;
-                                    &.time{
-                                        width: 3em;
+                                    width: 8em;
+                                    textarea{
+                                        line-height: 1.8em;
+                                        & time{
+                                            width: 5em;
+                                        }
                                     }
-                                    
                                 }
+                                
+                                
                             }
                         }
                     }
@@ -65,11 +69,27 @@
                         margin: 1em 0;
                     }
                 }
+                &__option{
+                    position: absolute;
+                    bottom: 0.3em;
+                    right: 2em;
+                    .fa-plus{
+                        
+                        font-size: 1.5em;
+                        &:hover{
+                            cursor: pointer;
+                            color: #72cef3;
+                        }
+                        
+                    }
+                }
+                
             }
         }
         
     }
     textarea, input{
+        font-family: sans-serif;
         padding: 0.4em;
         width: 100%;
         outline: none;
@@ -96,15 +116,19 @@
                             tr{
                                 td{
                                     &.first{
-                                        width: 12em;
-                                        &.time{
-                                            width: 8em;
+                                        width: 10em;
+                                        textarea{
+                                            &.time{
+                                                width: 8em;
+                                            }
                                         }
+                                        
                                     }
                                 }
                             }
                         }
                     }
+                    
                 }
 
             }
