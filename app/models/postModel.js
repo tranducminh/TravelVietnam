@@ -61,7 +61,7 @@ function findPostByID(postID) {
 
 function getPostsByCityNameID(cityNameID) {
     return new Promise((resolve, reject) => {
-        posts.find({cityNameID: cicityNameIDtyID}, (err, postsData) => {
+        posts.find({cityNameID: cityNameID}, (err, postsData) => {
             if(err){
                 reject('')
             }

@@ -28,8 +28,8 @@
                 </div>
                 <div class="part">
                     <% cities.forEach(city => { %>
-                    <a href="/city" class="container__content__cities__city block chosen">
-                        <div class="bg-img" style="background-image: url('<%= city.images[0] %>');">
+                    <a href="/city/<%= city.nameID %>" class="container__content__cities__city block chosen">
+                        <div class="bg-img" style="background-image: url('<%= city.images[0].src %>');">
                             <h1><%= city.name %> </h1>
                         </div>
                     </a>
@@ -44,49 +44,7 @@
             </div>
             <!-- END__CITIES -->
 
-            <div class="container__content__toprated">
-                <div class="container__content__toprated__title">
-                    <div class="font font--big font--bold">Saigon's top rated</div>
-                </div>
-                <div class="part">
-                    <div class="container__content__toprated__post block">
-                        <a href="" class="bg-img" style="background-image: url('/assets/images/me/ho_guom.jpg');">
-                            <h1></h1>
-                        </a>
-                        <div class="flex flex--spacebetween">
-                            <div class="font font--small">$15 for 2 hours</div>
-                            <a href="/city" class="container__content__toprated__post__place flex">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="font font--small">Ho Chi Minh
-                                    City</div>
-
-                            </a>
-                        </div>
-                        <p class="font font--bold">
-                            <a class="chosen" href="#">A consultative chat with Hoc and learn more about
-                                Sartoriak-Gentleman
-                                Style in
-                                Saigon</a>
-                        </p>
-
-                        <span>
-                            <span>
-                                <i class="fas fa-star" style="color: #35b7c9"></i>
-                                <i class="fas fa-star" style="color: #35b7c9"></i>
-                                <i class="fas fa-star" style="color: #35b7c9"></i>
-                                <i class="fas fa-star" style="color: #35b7c9"></i>
-                            </span>
-
-                            <span>
-                                <span class="font font--small">1 reviews</span>
-                            </span>
-                        </span>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- END__TOPRATED -->
+            
         </div>
         <!-- END__CONTENT -->
     </div>

@@ -1,0 +1,38 @@
+.container{
+    //position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#39d1e6,#fff);
+    &__content{
+        
+        width: 100%;
+        height: 100%;
+        
+        &__center{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10em 1em;
+            table{
+                tr{
+                    
+                    td{
+                        padding: 0.5em;
+                        &.title{
+                            min-width: 8em;
+                        }
+                        input{
+                            font-size: 1.1em;
+                            padding: 0.5em;
+                            width: 80%;
+                            outline: none;
+                            border-radius: 0.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

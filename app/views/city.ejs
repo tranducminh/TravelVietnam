@@ -4,7 +4,7 @@
 <head>
     <%- include('head') %>
     <link rel="stylesheet" href="/assets/css/city.css">
-    <title></title>
+    <title>Tour đi <%= city.name %></title>
 </head>
 
 <body>
@@ -90,46 +90,46 @@
             <!-- Các tour du lịch -->
             <div class="container__content__post">
                 <div class="container__content__post__place">
-                    <div class="font font--bold font--big">Tour đi Đà Lạt</div>
+                    <div class="font font--bold font--big">Tour đi <%= city.name %>  </div>
                 </div>
 
                 <!-- tất cả các bài đăng về tour tại địa điểm -->
                 <div class="part">
-
-                    <!-- bài đăng của tour -->
+                    <% posts.forEach(post => { %>
+                        <!-- bài đăng của tour -->
                     <div class="block">
 
                         <div class="container__content__post__detail">
                             <!-- tiêu đề tour du lịch -->
                             <div class="container__content__post__detail__title">
-                                <div class="font font--normal font--bold font--space">Tour đi Đà Lạt Thác Voi - Làng
-                                    nghề
+                                <div class="font font--normal font--bold font--space">
+                                    <%= post.name %>
                                 </div>
                             </div>
                             <!-- end-tiêu đề tour du lịch -->
 
                             <!-- chi tiết tour du lịch -->
                             <div class="container__content__post__detail__content">
-                                <a href="#" class="bg-img"
-                                    style="background-image: url('/assets/images/me/ho_guom.jpg');">
+                                <a href="/post/<%= post._id %>" class="bg-img"
+                                    style="background-image: url('<%= post.images[0].src %>');">
 
                                 </a>
                                 <div class="container__content__post__detail__content__info">
                                     <div class="font--space">
                                         <span class="font font--bold">Ngày khởi hành: </span>
-                                        <span class="font font--blue">Hàng ngày</span>
+                                        <span class="font font--blue"><%= post.departureDate %></span>
                                     </div>
                                     <div class="font--space">
                                         <span class="font font--bold">Địa điểm khởi hành: </span>
-                                        <span class="font font--blue">Đà Lạt</span>
+                                        <span class="font font--blue"><%= post.departurePlace %></span>
                                     </div>
                                     <div class="font--space">
                                         <span class="font font--bold">Thời gian: </span>
-                                        <span class="font font--blue">3 ngày 2 đêm</span>
+                                        <span class="font font--blue"><%= post.time %></span>
                                     </div>
                                     <div class="font--space">
                                         <span class="font font--bold">Phương tiện: </span>
-                                        <span class="font font--blue">Ô tô</span>
+                                        <span class="font font--blue"><%= post.vehicle %></span>
                                     </div>
 
                                 </div>
@@ -139,11 +139,13 @@
 
                         <!-- giá của tour -->
                         <div class="container__content__post__price">
-                            <div class="font--normal font--bold font--green">10.000.000 VND</div>
-                            <div class="btn btn--blue font">Xem tour</div>
+                            <div class="font--normal font--bold font--green"><%= post.cost %></div>
+                            <a href = "/post/<%= post._id %>" class="btn btn--blue font">Xem tour</a>
                         </div>
                     </div>
                     <!-- kết thúc bài đăng của tour -->
+                    <% }) %>
+                    
 
 
                 </div>

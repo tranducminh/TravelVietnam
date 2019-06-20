@@ -6,6 +6,7 @@ router.use('/', require('./userRoute'));
 router.use('/', require('./citiesRoute'));
 router.use('/post', require('./postRoute'));
 router.use('/city', require('./cityRoute'));
+router.use('/admin', require('./adminRoute'));
 
 router.get('/partner/*', userCtrl.isLoggedIn)
 router.use('/partner', require('./partnerRoute'));

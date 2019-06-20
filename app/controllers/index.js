@@ -3,5 +3,6 @@ module.exports = {
     Cities: require('./citiesController'),
     Post: require('./postController'),
     Partner: require('./partnerController'),
-    City: require('./cityController')
+    City: require('./cityController'),
+    Admin: require('./adminController')
 }

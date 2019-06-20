@@ -46,6 +46,7 @@ function creatPost(req, res) {
 
     let post = {
         // partnerID: req.session.passport.user,
+        cityNameID: "da-lat",
         partnerID: "5d0908be1c9d440000fa2ab9",
         name: req.body.name,
         departureDate: req.body.departureDate,

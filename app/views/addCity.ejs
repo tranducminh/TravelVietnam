@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head') %>
+    <link rel="stylesheet" href="/assets/css/addCity.css">
+    <title>Add city info</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__header">
+            <%- include('header') -%>
+        </div>
+        <div class="container__content">
+            <div class="container__content__center">
+                <form action="/admin/add-city" method="POST" method="POST" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <div class="font font--bold">Tên thành phố</div>
+                            </td>
+                            <td>
+                                <input type="text" name="name" placeholder="Đà Lạt">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <div class="font font--bold">NameID thành phố</div>
+                            </td>
+                            <td>
+                                <input type="text" name="nameID" placeholder="da-lat">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                <div class="font font--bold">Ảnh về thành phố</div>
+                            </td>
+                            <td>
+                                <input type="file" name="file" id="">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <button type="submit" class="btn btn--green font">Thêm thành phố</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
