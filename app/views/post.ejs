@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('head') %> 
+    <%- include('head') %>
     <link rel="stylesheet" href="/assets/css/post.css">
     <title>Document</title>
 </head>
@@ -16,24 +16,9 @@
 
             <!-- content__header -->
             <div class="container__content__header">
-                <div class="container__content__header__image" style="background-image: url('/assets/images/me/MINH.jpg')">
-                </div>
-                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
-
-                </div>
-                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
-
-                </div>
-                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
-
-                </div>
-                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
-
-                </div>
-                <div class="container__content__header__image" style="background-image: url('/assets/images/me/1.jpg')">
-
-                </div>
-
+                <% post.images.forEach(image => { %>
+                <div class="container__content__header__image" style="background-image: url('<%= image.src %>')"></div>
+                <% }) %>
 
             </div>
             <!-- END_CONTENT_HEADER -->
@@ -42,7 +27,7 @@
             <div class="container__content__center">
                 <!-- Tên tour -->
                 <div class="container__content__center__title">
-                    <div class="font font--big font--bold font--blue">Tour Du Lịch Đà Lạt Thác Voi - Làng Nghề 1 Ngày</div>
+                    <div class="font font--big font--bold font--blue"><%= post.name %> </div>
                 </div>
 
                 <!-- Chi tiết tour -->
@@ -52,31 +37,31 @@
                         <table>
                             <tr>
                                 <td class="first font font--bold">Ngày khởi hành </td>
-                                <td class="second font">Hàng ngày</td>
+                                <td class="second font"><%= post.departureDate %> </td>
                             </tr>
                             <tr></tr>
                             <tr>
                                 <td class="first font font--bold">Địa điểm khởi hành </td>
                                 <td class="second">
-                                    Đà Lạt
+                                    <%= post.departurePlace %>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="first font font--bold">Thời gian </td>
                                 <td class="second">
-                                    3 ngày 2 đêm
+                                    <%= post.time %>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="first font font--bold">Phương tiện </td>
                                 <td class="second">
-                                    Ô tô
+                                    <%= post.vehicle %>
                                 </td>
                             </tr>
 
                         </table>
                         <div class="container__content__center__part__content__order">
-                            <div class="font font--normal font--green font--bold">300.000 VND</div>
+                            <div class="font font--normal font--green font--bold"><%= post.cost %> </div>
                             <button class="btn btn--blue font">Đặt ngay</button>
                         </div>
 
@@ -97,13 +82,13 @@
                             <tr>
                                 <td class="first font font--bold">Địa chỉ</td>
                                 <td class="second">
-                                    
+
                                 </td>
                             </tr>
                             <tr>
                                 <td class="first font font--bold">SĐT liên hệ </td>
                                 <td class="second">
-                                    
+
                                 </td>
                             </tr>
 
@@ -120,27 +105,42 @@
                     </div>
                     <div class="container__content__center__part__content">
                         <table>
+                            <% post.schedule.forEach(schedule => { %>
                             <tr>
-                                <td class="first time font font--bold">8:30 - 9:30</td>
-                                <td class="second font">Đón khách tại Khách sạn Tham quan: Vườn Hoa và Vườn Rau Vạn
-                                    Thành</td>
-                            </tr>
-                            <tr></tr>
-                            <tr>
-                                <td class="first time font font--bold">8:30 - 9:30</td>
+                                <td class="first time font font--bold"> <%= schedule.time %> </td>
                                 <td class="second">
-                                    <div class="font font--bold font--space">Cơ sở sản xuất tơ tằm</div>
-                                    <div class="font">Sau khi các bạn tham quan cách nuôi tằm lấy tơ – tại đây quý khách
-                                        sẽ học được cách
-                                        lấy tơ từ kén tằm và quấn dệt thành lụa . Đồng thời quý khách có thể mua các sản
-                                        phẩm từ tơ tằm tại đây.</div>
+                                    <div class="font font--bold font--space"><%= schedule.title %></div>
+                                    <div class="font"><%= schedule.detail %></div>
                                 </td>
                             </tr>
+                            <% }) %>
+
 
                         </table>
                     </div>
                 </div>
                 <!-- Hết lịch trình -->
+                <!-- Cam kết -->
+                <div class="container__content__center__part">
+                    <div class="container__content__center__part__title">
+                        <div class="font font--normal font--bold">Cam kết</div>
+                    </div>
+                    <div id="policy" class="container__content__center__part__content">
+                        <table>
+                            <% post.policy.forEach(policy => { %>
+                            <tr>
+                                <td class="second">
+                                    
+                                    <div class="font"><%= policy.detail %></div>
+                                </td>
+                            </tr>
+                            <% }) %>
+
+                        </table>
+                    </div>
+                    
+                </div>
+                <!-- Hết cam kết -->
 
             </div>
             <!-- end_content_center -->

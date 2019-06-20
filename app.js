@@ -24,13 +24,7 @@ app.set('views', './app/views')
 app.get("/city", (req, res) => {
     res.render('city.ejs')
 })
-app.get("/post", (req, res) => {
-    res.render('post.ejs')
-})
 
-app.get("/addPost", (req, res) => {
-    res.render('addPost.ejs')
-})
 
 app.use(require('./app/routes'));
 /**

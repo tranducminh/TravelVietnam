@@ -1,11 +1,9 @@
-let City = require('../models').City;
+let postModel = require('../models').Post;
 
 module.exports = {
-    getAllCities: getAllCities
+    getPostsByCityNameID: getPostsByCityNameID
 }
 
-function  getAllCities() {
-    console.log(City.getAllCities())
-    return City.getAllCities();
-    
+function getPostsByCityNameID(cityNameID) {
+    return postModel.getPostsByCityNameID(cityNameID);
 }

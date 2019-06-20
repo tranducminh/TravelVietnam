@@ -24,10 +24,10 @@ function logout(req, res) {
 
 function isLoggedIn(req, res, next) {
     if (req.session.passport){
-        
+        console.log(req.session)
         return next();
     }
-    //console.log(req.session)
+    console.log(req.session)
     return res.status(403).redirect('/signin');
     // res.redirect('/signin'); // nếu chưa đăng nhâp điều hướng quay lại trang chủ
 }

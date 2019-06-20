@@ -2,6 +2,7 @@ let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let citySchema = new Schema({
+    nameID: String,
     name: String,
     images: [
         

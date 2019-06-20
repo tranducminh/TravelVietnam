@@ -2,6 +2,7 @@ let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let postSchema = new Schema({
+    cityNameID: String,
     partnerID: String,
     name : String,
     departureDate: String,
@@ -20,18 +21,59 @@ let postSchema = new Schema({
         {
             detail: String
         }
+    ],
+    images: [
+        {
+            src: String
+        }
     ]
 })
 
-let post = mongoose.model("post", postSchema); 
+let posts = mongoose.model("post", postSchema); 
 
 
 function creatPost(_post) {
-    post.create(_post, (err, results) => {
-        console.log(results);
+    return new Promise((resolve, reject) => {
+        posts.create(_post, (err, results) => {
+            if(err){
+                reject()
+            }
+            else{
+                return resolve(results)
+            }
+        })
+    })
+    
+}
+
+function findPostByID(postID) {
+    return new Promise((resolve, reject) => {
+        posts.findOne({_id: postID}, (err, postData) => {
+            if(err){
+                reject('')
+            }
+            else{
+                return resolve(postData)
+            }
+        })
+    })
+}
+
+function getPostsByCityNameID(cityNameID) {
+    return new Promise((resolve, reject) => {
+        posts.find({cityNameID: cicityNameIDtyID}, (err, postsData) => {
+            if(err){
+                reject('')
+            }
+            else{
+                return resolve(postsData)
+            }
+        })
     })
 }
 
 module.exports = {
-    creatPost: creatPost
+    creatPost: creatPost,
+    findPostByID: findPostByID,
+    getPostsByCityNameID: getPostsByCityNameID
 }

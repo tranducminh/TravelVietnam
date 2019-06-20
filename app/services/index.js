@@ -1,4 +1,6 @@
 module.exports = {
-    City: require('./cityService'),
-    Post: require('./postService')
+    Cities: require('./citiesService'),
+    Post: require('./postService'),
+    Partner: require('./partnerService'),
+    City: require('./cityService')
 }

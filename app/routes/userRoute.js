@@ -11,7 +11,9 @@ router.use(session({
     secret: 'khongnoi',
     cookie: {
         expires: 365 * 24 * 60 * 60 * 1000 //thời gian cookie còn hiệu lực mili giây
-    } 
+    }, 
+    saveUninitialized: true,
+    resave: false 
 }));
 router.use(flash());
 
@@ -24,7 +26,7 @@ router.route('/signin')
     .get(userCtrl.renderLoginPage)
     .post(
         passport.authenticate('local-login', {
-            successRedirect: '/addPost', // đăng ký thành công điều hướng tới trang hiển thị profile
+            successRedirect: '/partner/add-post', // đăng ký thành công điều hướng tới trang hiển thị profile
             failureRedirect: '/signin', // đăng ký không thành công thì điều hướng quay lại trang signup
             failureFlash: true
         })

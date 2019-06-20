@@ -42,7 +42,12 @@
             <!-- Content_center -->
             <div class="container__content__center">
 
-                <form action="/add-post" method="POST">
+                <form action="/partner/add-post" method="POST" enctype="multipart/form-data">
+                    <div class="container__content__center__image">
+                        <div class="font font--normal">Ảnh về tour du lịch sẽ được hiển thị như trên, hãy tải các bức ảnh về tour du lịch của bạn </div>
+                        <input type="file" multiple name="file" id="">
+                    </div>
+
                     <!-- Tên tour -->
                     <div class="container__content__center__title">
                         <textarea name = "name" type="text" class="font font--big font--bold font--blue"
@@ -132,7 +137,7 @@
 
                                 <tr>
                                     <td class="first">
-                                        <textarea name = "scheduleTime" name="" id="" rows="1" class="time font font--bold"
+                                        <textarea name = "scheduleTime" id="" rows="1" class="time font font--bold"
                                             placeholder='Thời gian'></textarea>
                                     </td>
                                     <td class="second">

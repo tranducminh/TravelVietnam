@@ -1,7 +1,7 @@
 let router = require('express').Router();
 let postCtrl = require('../controllers').Post;
 
-router.route('/add-post')
-    .post(postCtrl.creatPost)
+router.route('/:postID')
+    .get(postCtrl.renderPostPage)
 
 module.exports = router;
