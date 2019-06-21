@@ -1,6 +1,6 @@
 html, body{
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     
 }
 *{
@@ -23,7 +23,8 @@ a {
     justify-content: space-between;
     align-items: center;
     color: black;
-    // background: linear-gradient(#fff, #fff, #39d1e6);
+    background-color: #fff;
+    // background: linear-gradient(#39d1e6, #fff, #fff);
     // box-shadow: 0 0 1em darkgrey;
     &__left{
         display: flex;
@@ -154,6 +155,7 @@ a {
 @media (min-width: 930px){
     .header{
         padding: 0.8em 10em;
+        background: linear-gradient(#39d1e6, #fff, #fff);
         &__left{
             &__title{
                 a{

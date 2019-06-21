@@ -61,6 +61,9 @@
             color: #39d1e6;
         }
     }
+    &__footer{
+        
+    }
 }
 @media (min-width: 930px){
     .container{
@@ -81,6 +84,9 @@
             &__toprated{
                 padding: 1em 0;
             }
+        }
+        &__footer{
+            
         }
     }
     .block{

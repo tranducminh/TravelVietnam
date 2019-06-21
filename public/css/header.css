@@ -1,6 +1,6 @@
 html, body {
   box-sizing: border-box;
-  font-family: sans-serif; }
+  font-family: Helvetica, sans-serif; }
 
 * {
   margin: 0;
@@ -20,7 +20,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black; }
+  color: black;
+  background-color: #fff; }
   .header__left {
     display: flex;
     align-items: center; }
@@ -114,7 +115,8 @@ a {
 
 @media (min-width: 930px) {
   .header {
-    padding: 0.8em 10em; }
+    padding: 0.8em 10em;
+    background: linear-gradient(#39d1e6, #fff, #fff); }
     .header__left__title a {
       width: 10em;
       height: 2em;
