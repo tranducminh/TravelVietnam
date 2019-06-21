@@ -90,13 +90,13 @@
             <!-- Các tour du lịch -->
             <div class="container__content__post">
                 <div class="container__content__post__place">
-                    <div class="font font--bold font--big">Tour đi <%= city.name %>  </div>
+                    <div class="font font--bold font--big">Tour đi <%= city.name %> </div>
                 </div>
 
                 <!-- tất cả các bài đăng về tour tại địa điểm -->
                 <div class="part">
                     <% posts.forEach(post => { %>
-                        <!-- bài đăng của tour -->
+                    <!-- bài đăng của tour -->
                     <div class="block">
 
                         <div class="container__content__post__detail">
@@ -140,12 +140,12 @@
                         <!-- giá của tour -->
                         <div class="container__content__post__price">
                             <div class="font--normal font--bold font--green"><%= post.cost %></div>
-                            <a href = "/post/<%= post._id %>" class="btn btn--blue font">Xem tour</a>
+                            <a href="/post/<%= post._id %>" class="btn btn--blue font">Xem tour</a>
                         </div>
                     </div>
                     <!-- kết thúc bài đăng của tour -->
                     <% }) %>
-                    
+
 
 
                 </div>
